@@ -1,4 +1,3 @@
-//npm install node-fetch
 const server = require("fastify")();
 const fetch = require("node-fetch");
 const https = require("https");
@@ -16,6 +15,11 @@ server.get("/", async () => {
     pid: process.pid,
     data_servicio: payload,
   };
+});
+
+server.get("/health", async () => {
+  console.log("health check");
+  return "OK";
 });
 
 server.listen(PORT, HOST, () => {

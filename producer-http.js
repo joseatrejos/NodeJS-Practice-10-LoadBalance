@@ -1,4 +1,3 @@
-//npm install fastify
 const fs = require("fs");
 const server = require("fastify")();
 
