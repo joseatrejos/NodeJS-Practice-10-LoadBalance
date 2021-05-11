@@ -13,6 +13,7 @@ server.get("/", async () => {
 
   return {
     pid: process.pid,
+    fuente: "virtual",
     data_servicio: payload,
   };
 });
